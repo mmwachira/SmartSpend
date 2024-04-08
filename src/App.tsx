@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Button } from '@mui/material';
+import Centered from './components/Centered';
+import { Theme } from './components/Theme';
+import Form from './components/Form';
+import { ButtonGroup } from './components/ButtonGroup';
+import { GetStarted } from './components/GetStarted';
+import { Footer } from './components/Footer';
+import Header from './components/Header';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return ( 
+    
+    <>
+      <Header />
+      <GetStarted />
+      <ButtonGroup />
+      <Footer />
+      
+    </>
+      
+  )
 }
 
 export default App;
