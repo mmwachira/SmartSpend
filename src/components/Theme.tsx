@@ -1,22 +1,20 @@
 import React from 'react';
 import { ThemeProvider, createTheme} from '@mui/material/styles';
-import { green, purple } from '@mui/material/colors';
+import { blue, purple, yellow } from '@mui/material/colors';
 
-const outertheme = createTheme({
+const maintheme = createTheme({
     palette: {
+      mode: 'dark',
       primary: {
-        main: purple[900],
+        main: yellow[700],
       },
+      secondary: {
+        main: blue[300],
+        dark: purple[200], 
+      }
     },
   });
   
-  const innertheme = createTheme({
-    palette: {
-      primary: {
-        main: green[900],
-      },
-    },
-  });
 
   type ThemeProps = {
     children: React.ReactNode;
@@ -24,10 +22,8 @@ const outertheme = createTheme({
 
   export const Theme = ({ children } : ThemeProps) => {
     return (
-        <ThemeProvider theme = {outertheme}>
-            <ThemeProvider theme = {innertheme}>
-                {children}
-            </ThemeProvider>
+        <ThemeProvider theme = {maintheme}> 
+          {children}
         </ThemeProvider>
     )
   }
