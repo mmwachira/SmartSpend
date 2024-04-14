@@ -33,7 +33,8 @@ function Header() {
     return (
     <>
       <Slide appear={false} direction="down" in={!trigger}>
-        <AppBar position="static">
+        <AppBar position="static"
+        sx={{backgroundColor: "white"}}>
           <Container maxWidth="xl">
             <Toolbar disableGutters>
               <Typography
@@ -47,7 +48,7 @@ function Header() {
                   fontFamily: 'monospace',
                   fontWeight: 700,
                   letterSpacing: '.3rem',
-                  color: 'inherit',
+                  color: 'black',
                   textDecoration: 'none',
                 }}
               >
@@ -85,7 +86,7 @@ function Header() {
                 >
                   {pages.map((page) => (
                     <MenuItem key={page} onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">{page}</Typography>
+                      <Typography textAlign="center" sx={{color: "black"}}>{page}</Typography>
                     </MenuItem>
                   ))}
                 </Menu>
@@ -102,7 +103,7 @@ function Header() {
                   fontFamily: 'monospace',
                   fontWeight: 700,
                   letterSpacing: '.3rem',
-                  color: 'inherit',
+                  color: 'black',
                   textDecoration: 'none',
                 }}
               >
@@ -113,7 +114,7 @@ function Header() {
                   <Button
                     key={page}
                     onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: 'white', display: 'block' }}
+                    sx={{ my: 2, color: 'black', display: 'block' }}
                   >
                     {page}
                   </Button>

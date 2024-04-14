@@ -9,7 +9,9 @@ export function ButtonDownload(){
         alignItems="center"
         justifyContent="center"
         padding="2vh"
-        sx={{border: '2px solid grey'}}
+        sx={{
+            //border: '2px solid grey'
+        }}
         >
             <Button color="primary" variant="contained">Download</Button>
         </Box>
@@ -23,7 +25,9 @@ export function ButtonStart(){
         alignItems="center"
         justifyContent="center"
         padding="2vh"
-        sx={{border: '2px solid grey'}}
+        sx={{
+            //border: '2px solid grey'
+        }}
         >
             <Button color="secondary" variant="outlined">Get Started</Button>
         </Box>
